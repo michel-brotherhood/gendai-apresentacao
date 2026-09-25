@@ -38,6 +38,13 @@ export default function Nav() {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="fixed left-2 top-2 z-[60] -translate-y-24 rounded bg-ink px-4 py-2 text-sm text-paper transition-transform focus-visible:translate-y-0"
+      >
+        Pular para o conteúdo
+      </a>
+
       <div className="fixed inset-x-0 top-0 z-50 h-[3px] bg-line/30">
         <div
           className="h-full bg-accent transition-[width] duration-150 ease-out"
@@ -70,7 +77,7 @@ export default function Nav() {
               onClick={() => scrollToId(IDS[Math.max(activeIndex - 1, 0)])}
               disabled={activeIndex <= 0}
               aria-label="Seção anterior"
-              className="h-8 w-8 rounded border border-line/70 text-ink transition-colors hover:bg-ink hover:text-paper disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink md:h-9 md:w-9"
+              className="h-9 w-9 rounded border border-line text-ink transition-colors hover:bg-ink hover:text-paper disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink md:h-10 md:w-10"
             >
               ←
             </button>
@@ -79,7 +86,7 @@ export default function Nav() {
               onClick={() => scrollToId(IDS[Math.min(activeIndex + 1, IDS.length - 1)])}
               disabled={activeIndex >= IDS.length - 1}
               aria-label="Próxima seção"
-              className="h-8 w-8 rounded border border-line/70 text-ink transition-colors hover:bg-ink hover:text-paper disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink md:h-9 md:w-9"
+              className="h-9 w-9 rounded border border-line text-ink transition-colors hover:bg-ink hover:text-paper disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink md:h-10 md:w-10"
             >
               →
             </button>
@@ -87,7 +94,7 @@ export default function Nav() {
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}
-              className="rounded border border-line/70 px-3 py-1.5 font-display text-xs uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-paper md:text-sm"
+              className="rounded border border-line px-3 py-2 font-display text-xs uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-paper md:text-sm"
             >
               Agenda
             </button>

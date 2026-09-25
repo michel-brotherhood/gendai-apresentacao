@@ -1,7 +1,7 @@
 export default function StatCard({ title, children, className = "" }) {
   return (
     <div
-      className={`rounded-2xl border border-line/70 bg-white/50 px-6 py-5 ${className}`}
+      className={`rounded-2xl border border-line bg-white/50 px-6 py-5 ${className}`}
     >
       <h3 className="mb-2 font-display text-lg uppercase tracking-wide text-ink">
         {title}

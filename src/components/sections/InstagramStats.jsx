@@ -1,4 +1,4 @@
-import instagramPhoto from "../../assets/photos/instagram-bowl.jpg";
+import instagramPhoto from "../../assets/photos/instagram-bowl.webp";
 import { Heading } from "../Heading.jsx";
 import PhotoSplit from "../PhotoSplit.jsx";
 import Section from "../Section.jsx";

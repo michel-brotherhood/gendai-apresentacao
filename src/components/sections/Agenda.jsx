@@ -1,4 +1,4 @@
-import agendaPhoto from "../../assets/photos/agenda-salmon.jpg";
+import agendaPhoto from "../../assets/photos/agenda-salmon.webp";
 import { Heading } from "../Heading.jsx";
 import PhotoSplit from "../PhotoSplit.jsx";
 import Section from "../Section.jsx";

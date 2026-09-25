@@ -1,7 +1,7 @@
-import aizomePhoto from "../../assets/photos/inspiration-aizome.jpg";
-import sakaguraPhoto from "../../assets/photos/inspiration-sakagura.jpg";
-import sushiguenPhoto from "../../assets/photos/inspiration-sushiguen.jpg";
-import sushileblonPhoto from "../../assets/photos/inspiration-sushileblon.jpg";
+import aizomePhoto from "../../assets/photos/inspiration-aizome.webp";
+import sakaguraPhoto from "../../assets/photos/inspiration-sakagura.webp";
+import sushiguenPhoto from "../../assets/photos/inspiration-sushiguen.webp";
+import sushileblonPhoto from "../../assets/photos/inspiration-sushileblon.webp";
 import { Heading } from "../Heading.jsx";
 import Section from "../Section.jsx";
 

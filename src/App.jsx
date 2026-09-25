@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="min-h-screen bg-paper-dim">
       <Nav />
-      <main className="pt-14 md:pt-16">
+      <main id="main-content" className="pt-14 md:pt-16">
         <Cover />
         <Agenda />
         <Debriefing />

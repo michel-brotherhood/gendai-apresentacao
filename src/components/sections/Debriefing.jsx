@@ -1,4 +1,4 @@
-import debriefingPhoto from "../../assets/photos/debriefing-plate.jpg";
+import debriefingPhoto from "../../assets/photos/debriefing-plate.webp";
 import { Heading, Prose } from "../Heading.jsx";
 import PhotoSplit from "../PhotoSplit.jsx";
 import Section from "../Section.jsx";
