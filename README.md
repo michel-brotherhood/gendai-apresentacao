@@ -1,45 +1,46 @@
-# Gendai Premium — apresentação web
+# Gendai Premium — Estratégia de conteúdo digital
 
-Apresentação estática navegável baseada no deck original, com 14 páginas e o vídeo `gendaicsom.mp4` reproduzindo na página 12.
+Versão web da apresentação "Gendai Premium — Estratégia de conteúdo digital" (V4 Company). Reconstruída como uma aplicação React real — não como screenshots dos slides — para ser totalmente responsiva, acessível e indexável, com o vídeo do Instagram embutido nativamente.
 
-## Como publicar
+## Stack
 
-Envie **todo o conteúdo desta pasta** para o serviço de hospedagem estática, mantendo esta estrutura:
+- [Vite](https://vite.dev/) + [React 19](https://react.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
 
-```text
-index.html
-README.md
-slides/
-  slide-01.png
-  ...
-  slide-14.png
-media/
-  gendaicsom.mp4
-  video-poster.jpg
+## Rodando localmente
+
+```bash
+npm install
+npm run dev       # servidor de desenvolvimento
+npm run build     # build de produção em dist/
+npm run preview   # serve o build de produção localmente
 ```
 
-O arquivo de entrada é `index.html`.
+## Estrutura
 
-## Controles
+```text
+src/
+  components/
+    sections/     # uma seção por página do deck original (14 no total)
+    ...            # primitivos reutilizáveis (Section, PhotoSplit, Nav, VideoCard, TagCloud...)
+  hooks/           # scroll-spy e progresso de scroll
+  assets/
+    photos/        # fotos recortadas das artes originais do Canva
+    video/          # vídeo do Instagram (seção "Layout")
+raw-source/        # PPTX original e screenshots de cada slide, mantidos como referência
+```
 
-- Botões `←` e `→` ou teclas de seta: navegar entre páginas.
-- `PageUp` / `PageDown`: navegar entre páginas.
-- `Espaço`: avançar uma página.
-- `M`: ativar ou silenciar o som.
-- `F`: entrar ou sair da tela cheia.
-- No celular, é possível deslizar horizontalmente.
+## Navegação
 
-O botão **Tela cheia** expande o palco para toda a viewport e mantém a proporção 16:9, evitando distorções ou cortes do layout.
+- Scroll vertical com 14 seções, cada uma com HTML/CSS real (texto selecionável, indexável, com tipografia fluida — nada de imagem encolhendo no mobile).
+- Barra superior fixa com barra de progresso, avançar/voltar por seção e menu "Agenda" com link direto para qualquer seção.
+- Atalhos de teclado: setas (ou Page Up/Down) para navegar entre seções.
+- O vídeo da seção "Layout" toca em loop e mudo automaticamente ao entrar na tela, com botões para ativar o som e pausar.
 
-## Vídeo da página 12
+## Deploy
 
-O vídeo está configurado com:
+`npm run build` gera uma pasta `dist/` 100% estática — pode ser publicada em qualquer host (Vercel, Netlify, GitHub Pages, etc.).
 
-- reprodução automática ao chegar na página 12;
-- reprodução em loop;
-- `playsinline`, para funcionar melhor em celulares;
-- início silencioso quando o navegador bloqueia autoplay com áudio;
-- botão **Ativar som** para liberar o áudio após a interação do usuário;
-- botão **Pausar/Reproduzir**.
+## `raw-source/`
 
-Esse comportamento é o mais compatível com navegadores atuais: autoplay com som normalmente é bloqueado sem uma ação explícita do usuário.
+Contém o `.pptx` original e os 14 PNGs exportados do Canva/PowerPoint, mantidos apenas como referência de conteúdo e design — não fazem parte do bundle da aplicação.
