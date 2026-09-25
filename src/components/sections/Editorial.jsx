@@ -50,7 +50,7 @@ export default function Editorial() {
           {PILLARS.map((pillar) => (
             <div
               key={pillar.label}
-              className="grid grid-cols-1 gap-4 rounded-2xl border border-line/60 p-6 md:grid-cols-[minmax(0,220px)_1fr_1fr]"
+              className="grid grid-cols-1 gap-4 rounded-2xl border border-line p-6 md:grid-cols-[minmax(0,220px)_1fr_1fr]"
             >
               <div>
                 <PillBadge>{pillar.label}</PillBadge>

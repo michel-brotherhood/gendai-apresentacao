@@ -1,4 +1,4 @@
-import audiencePhoto from "../../assets/photos/audience-table.jpg";
+import audiencePhoto from "../../assets/photos/audience-table.webp";
 import { Heading } from "../Heading.jsx";
 import PhotoSplit from "../PhotoSplit.jsx";
 import PillBadge from "../PillBadge.jsx";

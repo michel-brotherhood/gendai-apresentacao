@@ -1,4 +1,4 @@
-import socialPhoto from "../../assets/photos/social-phone.jpg";
+import socialPhoto from "../../assets/photos/social-phone.webp";
 import { Heading, Prose } from "../Heading.jsx";
 import PhotoSplit from "../PhotoSplit.jsx";
 import Section from "../Section.jsx";

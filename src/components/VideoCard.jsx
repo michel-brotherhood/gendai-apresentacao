@@ -46,7 +46,7 @@ export default function VideoCard({ src, className = "" }) {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-line/60 shadow-lg shadow-ink/10 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-line shadow-lg shadow-ink/10 ${className}`}
     >
       <video
         ref={videoRef}

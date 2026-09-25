@@ -51,8 +51,8 @@ export default function Competitors() {
         <Heading>Nossos concorrentes</Heading>
 
         {/* Desktop table */}
-        <div className="mt-10 hidden overflow-hidden rounded-2xl border border-line/60 md:block">
-          <div className="grid grid-cols-4 gap-4 border-b border-line/60 bg-paper-dim/60 px-6 py-4">
+        <div className="mt-10 hidden overflow-hidden rounded-2xl border border-line md:block">
+          <div className="grid grid-cols-4 gap-4 border-b border-line bg-paper-dim/60 px-6 py-4">
             {["Concorrentes", "Redes sociais", "Posicionamento", "Faixa de valor"].map((label) => (
               <PillBadge key={label} className="justify-self-start">
                 {label}
@@ -77,7 +77,7 @@ export default function Competitors() {
         {/* Mobile cards */}
         <div className="mt-10 space-y-6 md:hidden">
           {COMPETITORS.map((c) => (
-            <div key={c.name} className="rounded-2xl border border-line/60 p-5">
+            <div key={c.name} className="rounded-2xl border border-line p-5">
               <p className="font-display text-lg font-semibold text-ink">{c.name}</p>
               <dl className="mt-3 space-y-3 text-sm text-ink/85">
                 <div>

@@ -1,4 +1,4 @@
-import coverPhoto from "../../assets/photos/cover-sashimi.jpg";
+import coverPhoto from "../../assets/photos/cover-sashimi.webp";
 import PhotoSplit from "../PhotoSplit.jsx";
 import Section from "../Section.jsx";
 
